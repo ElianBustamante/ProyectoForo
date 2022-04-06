@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Hoja estilos CSS -->
+    <link href="/css/styles.css" rel="stylesheet" type="text/css">
+
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+    <title>Administrador - Mi perfil</title>
+</head>
+
+<body id="cuerpoPrincipal">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(49, 49, 49); border-radius: 30px;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="Mi_perfil_Admin.html"><img src="/Imagenes/LOGO_02 (recorte_2).png" height="75px" alt="" loading="lazy" /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav">
+             <span class="navbar-toggler-icon"></span>
+         </button>
+            <div class="collapse navbar-collapse" id="main_nav">
+                <ul class="navbar-nav" style="font-size: 14px;">
+                    <li class="nav-item"> <a class="nav-link" href="Mi_perfil_Admin.html"> Mi perfil </a> </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown"> Foro (ahora) </a>
+                        <ul class="dropdown-menu dropdown-menu-end fade-down">
+                            <li><a class="dropdown-item" href="#">Configuracion Foro</a></li>
+                            <li><a class="dropdown-item" href="#">Ver publicaciones</a></li>
+                            <li><a class="dropdown-item" href="#">Mis publicaciones</a></li>
+                            <li><a class="dropdown-item" href="#">Crear publicación</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"> Hogares </a>
+                        <ul class="dropdown-menu dropdown-menu-end fade-down">
+                            <li><a class="dropdown-item" href="#">Ver hogares</a></li>
+                            <li><a class="dropdown-item" href="#">Registrar nuevo hogar</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"> Residentes </a>
+                        <ul class="dropdown-menu dropdown-menu-end fade-down">
+                            <li><a class="dropdown-item" href="#">Ver residentes</a></li>
+                            <li><a class="dropdown-item" href="/registrar_usuario">Registrar nuevo residente</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#"> Reportes </a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"> ¿Quiénes somos? </a></li>
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"> <img src="https://mdbootstrap.com/img/new/avatars/2.jpg" class="rounded-circle" height="55" alt="" loading="lazy" /> </a>
+                        <ul class="dropdown-menu dropdown-menu-end fade-down">
+                            <li><a class="dropdown-item" href="#">Configuracion de mi cuenta</a></li>
+                            <li><a class="dropdown-item" href="#">Configuracion Foro (ahora)</a></li>
+                            <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- navbar-collapse.// -->
+        </div>
+        <!-- container-fluid.// -->
+    </nav>
+    <!-- Navbar -->
+
+    <div id="bloqueContenido">
+
+        <!-- Mensaje registrar hogar -->
+        <h3><b>Agregar nueva categoría</b></h3>
+        <hr style="height: 1px; width: auto; background-color: black; border: 0px;" />
+
+        <p style="font-size: 16px;">
+            Estimado administrador(a), a continuación puede registrar/agregar una nueva categoria para los foros!
+        </p>
+        <hr style="height: 1px; width: auto; background-color: black; border: 0px;" />
+        <!-- Mensaje registrar hogar -->
+
+        <!-- Formulario registro CATEGORIA -->
+        <form id="formNuevoUser" th:action="@{'categoria/agregarCategoria'}" method="post">
+
+            <div style="margin-right: 300px;">
+
+                <!-- Nombre cat input -->
+                <div class="form-floating mb-4">
+                    <input type="text" id="formNombreCat" class="form-control" style="border-radius: 8px;" placeholder="Ingresar nombre de la categoria" name="cat_nombre"required/>
+                    <label class="form-label" for="formNombreCat">Nombre de la categoría</label>
+                </div>
+                <!-- Nombre cat input -->
+
+            </div>
+
+            <hr style="height: 1px; width: auto; background-color: black; border: 0px;" />
+
+            <!-- Botones Volver atrás y Registrar Categoria -->
+            <div class="container-fluid" style="margin-top: 20px;">
+                <div class="row text-center">
+                    <div class="col-sm-4">
+                        <a class="btn" href="Mi_perfil_Admin.html" id="volverBtn" role="button" title="Volver a mi perfil">
+                            <img src="/Imagenes/backIcon1.png" height="35px" class="rounded-circle" id="imgVolver">Volver atrás
+                        </a>
+                    </div>
+                    <div class="col-sm-4">
+
+                        <!-- Nueva categoria button -->
+                        <button type="submit" class="btn btn-primary" id="nuevoRegistroBtn">Agregar categoria</button>
+                        <!-- Nuevo categoria button -->
+
+                    </div>
+                </div>
+            </div>
+            <!-- Botones Volver atrás y Registrar categoria -->
+
+        </form>
+        <!-- Formulario registro CATEGORIA -->
+
+    </div>
+</body>
+
+</html>

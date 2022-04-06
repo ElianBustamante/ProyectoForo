@@ -1,0 +1,324 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+#mainBackground {
+    width: auto;
+    height: 850px;
+    background-image: url("../Imagenes/Background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#loginForm {
+    border-radius: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -170px;
+    margin-left: -400px;
+    width: 750px;
+    height: auto;
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    background-color: rgb(184, 189, 201);
+}
+
+#inputLogin {
+    border-radius: 6px;
+    font-size: 14px;
+    height: 36px;
+    margin-top: 5px;
+    border-style: solid;
+    border-width: 1px;
+    text-indent: 5px;
+    background-color: rgb(76, 83, 97);
+    color: white;
+}
+
+.botonLogin {
+    font-size: 16px;
+    font-weight: 550;
+    color: white;
+    width: 200px;
+    height: 45px;
+    border-radius: 10px;
+    border: 0px;
+    text-align: center;
+    background-color: rgb(76, 83, 97);
+}
+
+.botonLogin:hover {
+    background-color: rgb(49, 50, 53);
+}
+
+#mainMenu {
+    border-radius: 15px;
+    position: absolute;
+    margin-top: 60px;
+    width: 750px;
+    height: auto;
+    background-color: white;
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    background-color: rgb(184, 189, 201);
+}
+
+#cuerpoPrincipal {
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-bottom: 20px;
+    background-color: rgb(230, 214, 156);
+}
+
+#botonesBarra {
+    margin-top: 38px;
+    font-size: 14px;
+}
+
+@media all and (min-width: 992px) {
+    .navbar .dropdown-menu-end {
+        right: 0;
+        left: auto;
+    }
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+        transition: .3s;
+        margin-top: 0;
+    }
+    .navbar .nav-item:hover .nav-link {
+        color: #fff;
+    }
+    .navbar .dropdown-menu.fade-down {
+        top: 80%;
+        transform: rotateX(-75deg);
+        transform-origin: 0% 0%;
+        border-radius: 10px;
+        font-size: 13px;
+    }
+    .navbar .dropdown-menu.fade-up {
+        top: 180%;
+    }
+    .navbar .nav-item:hover .dropdown-menu {
+        transition: .3s;
+        opacity: 1;
+        visibility: visible;
+        top: 100%;
+        transform: rotateX(0deg);
+    }
+}
+
+#bloqueContenido {
+    background-color: rgb(184, 189, 201);
+    width: auto;
+    min-height: 630px;
+    height: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+    border-radius: 30px;
+    margin-top: 2px;
+    padding-bottom: 15px;
+}
+
+#ultimasNovedades {
+    padding-top: 20px;
+    text-align: center;
+}
+
+#bloqueNovedades {
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+table {
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    font-size: 14px;
+}
+
+#logoutBtn {
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 550;
+    width: 130px;
+    height: 40px;
+    padding-top: 7px;
+}
+
+.inputConfig {
+    border-radius: 6px;
+    height: 30px;
+    border-style: solid;
+    border-width: 0px;
+    text-indent: 5px;
+    background-color: rgb(76, 83, 97);
+    color: white;
+    margin-left: 150px;
+    width: 230px;
+}
+
+#volverBtn {
+    background-color: rgb(20, 41, 64);
+    font-size: 15px;
+    font-weight: 550;
+    color: white;
+    width: 145px;
+    height: 43px;
+    border-radius: 12px;
+    border: 0px;
+    text-align: left;
+}
+
+#volverBtn:hover {
+    filter: saturate(10%);
+}
+
+#eliminarCuentaBtn {
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 550;
+    padding-top: 7px;
+}
+
+#solicitarBtn {
+    background-color: rgb(76, 83, 97);
+    font-size: 15px;
+    font-weight: 550;
+    color: white;
+    border-radius: 8px;
+    border: 0px;
+    text-align: center;
+}
+
+#solicitarBtn:hover {
+    background-color: rgb(49, 50, 53);
+}
+
+#textJustificar {
+    border-radius: 8px;
+}
+
+#enviarSoliBtn {
+    font-size: 15px;
+    font-weight: 550;
+    color: white;
+    border-radius: 12px;
+    border: 0px;
+    text-align: center;
+    padding: 10px 18px;
+}
+
+#inputNuevaSolicitud {
+    border-radius: 6px;
+    height: 30px;
+    border-style: solid;
+    border-width: 0px;
+    text-indent: 5px;
+    margin-left: 95px;
+    width: 430px;
+    font-size: 16px;
+}
+
+#accionBtn {
+    font-size: 13px;
+    font-weight: 550;
+    color: white;
+    border-radius: 6px;
+    border: 0px;
+    height: 31px;
+    text-align: center;
+}
+
+.publicacionBlock {
+    font-size: 15px;
+}
+
+#selectCategoria {
+    border-radius: 7px;
+    border-style: solid;
+    padding: 5px 5px 5px 5px;
+    width: 300px;
+    font-weight: 400;
+}
+
+#inputAsunto {
+    border-radius: 7px;
+    border-style: solid;
+    border-width: 1px;
+    text-indent: 5px;
+    padding: 5px 5px 5px 5px;
+    width: 450px;
+    margin-left: 5px;
+}
+
+#nuevaPublicacionBtn {
+    font-size: 15px;
+    font-weight: 550;
+    color: white;
+    width: 145px;
+    height: 43px;
+    border-radius: 12px;
+    border: 0px;
+    text-align: center;
+}
+
+#cabeceraPublicacion {
+    border-style: solid;
+    border-width: 0px;
+    border-radius: 15px;
+    background-color: rgb(20, 41, 64);
+}
+
+#comentarioBlock {
+    margin-left: 70px;
+    margin-top: 10px;
+}
+
+#novedadesBtn {
+    font-size: 15px;
+    font-weight: 550;
+    color: white;
+    border-radius: 8px;
+    border: 0px;
+    text-align: center;
+}
+
+#formNuevoUser {
+    margin-top: 20px;
+    font-weight: 550;
+}
+
+#nuevoRegistroBtn {
+    font-size: 15px;
+    font-weight: 550;
+    color: white;
+    width: 145px;
+    height: 43px;
+    border-radius: 12px;
+    border: 0px;
+    text-align: center;
+}
+
+#actualizarBtn {
+    background: none!important;
+    border: none;
+    padding: 0!important;
+    /*optional*/
+    font-family: arial, sans-serif;
+    /*input has OS specific font-family*/
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
